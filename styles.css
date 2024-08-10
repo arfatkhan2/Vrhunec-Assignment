@@ -291,7 +291,7 @@ details[open] .faq-icon {
     background-size: cover;
     background-position: center;
     padding: 60px 0;
-    color: #534e4e;
+    color: #2e2929;
     position: relative;
 }
 
@@ -509,8 +509,11 @@ button:not(.contact-btn) {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid white;
    
 }
+
+
 
 button:not(.contact-btn)::before {
     content: '';
@@ -614,6 +617,8 @@ button:not(.contact-btn) span {
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
+
 
 
 
