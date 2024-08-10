@@ -1,3 +1,12 @@
+.full-width-container, .hero, .memory, .choose-anywhere, .content-container, .child-section, .faq-section, .newsletter, .footer {  
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -188,7 +197,7 @@ header {
 }
 
 .faq-image img {
-    width: 48%;
+    width: 41%;
     height: 3%;
     position: sticky;
     margin-left: 120%;
@@ -286,7 +295,7 @@ details[open] .faq-icon {
     position: relative;
 }
 
-.gallery-item, .places-section, .place-item {
+.gallery-item, .places-section {
     margin-bottom: 40px;
     text-align: center;
 }
@@ -306,24 +315,6 @@ img {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-    .gallery-item, .place-item {
-        display: inline-block;
-        width: 48%;
-        vertical-align: top;
-    }
-
-    .place-item {
-        width: 46%;
-        margin-left: 53px;
-    }
-
-    .places-section {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 .gallery-row {
@@ -403,12 +394,107 @@ img {
 .child-section {
     background-image: url('background1.png');
     background-size: cover;
-    background-position: center;  
+    background-position: center;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
-.child-text {
-    font-size: 35px;
+.place-item {
+    width: 45%;
+    text-align: left;
+    margin: 0;
+}
+
+.place-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.place-item h3 {
     font-family: 'Cardo', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.place-item p {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.place-item:first-child img {
+    height: 530px;
+}
+
+
+.place-item:last-child img {
+    height: 264px;
+    width: 330px;
+}   
+
+.place-item:last-child h3 {
+    font-size: 49px;
+    margin-bottom: -7px;
+    color: #000;
+    text-decoration: underline;
+    display: inline-block;
+    white-space: pre-wrap;
+    width: 275px;
+}
+
+
+.place-item:last-child .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+
+.place-item:last-child .main-text {
+    width: 60%;
+}
+
+.place-item:last-child .side-text {
+    width: 35%;
+    font-size: 12px;
+    color: #999;
+}
+
+.arrow-button {
+ 
+    background: none;
+    background-color: #EAE8E8;  
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin-left: 391px;
+ }
+
+
+.arrow-button:hover {
+    transform: translateX(5px);
+}
+
+.arrow-button svg {
+    width: 240px;
+    height: 61px;
+}
+
+.place-item:last-child p {
+    font-size: 16px;
+    margin-top: -90%;
+    margin-left: -85px;
 }
 
 .gallery-item img, .place-item img, .hero-image img, .faq-image img, .newsletterImg img {
@@ -423,7 +509,7 @@ button:not(.contact-btn) {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid white;
+   
 }
 
 button:not(.contact-btn)::before {
@@ -482,30 +568,24 @@ button:not(.contact-btn) span {
     width: 100%;
 }
 
-
-
-
-
-
 :root {
     --primary-gradient: linear-gradient(135deg, #d1dde6, #564b5b);
     --hover-gradient: linear-gradient(135deg, #969899, #c9c9c9);
     --text-color: #000000;
     --accent-color: #3d382f;
-  }
-  
-  .navbar {
-  
+}
+
+.navbar {
     padding: 15px 0;
-  }
-  
-  .nav-links li a {
+}
+
+.nav-links li a {
     color: var(--text-color);
     position: relative;
     transition: color 0.3s ease;
-  }
-  
-  .nav-links li a::after {
+}
+
+.nav-links li a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -514,24 +594,26 @@ button:not(.contact-btn) span {
     left: 0;
     background-color: var(--accent-color);
     transition: width 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
+}
+
+.nav-links li a:hover {
     color: var(--accent-color);
-  }
-  
-  .nav-links li a:hover::after {
+}
+
+.nav-links li a:hover::after {
     width: 100%;
-  }
-  
- 
-  .contact-btn:hover {
+}
+
+.contact-btn:hover {
     background: var(--hover-gradient);
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .contact-btn:active {
+}
+
+.contact-btn:active {
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
+}
+
+
+
